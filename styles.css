@@ -1,0 +1,383 @@
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  background-color: #444;
+  padding: 0.5rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-inline: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-inline-size: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-block-end: 80px;
+}
+
+section {
+  margin-block-end: 2rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  inset-block-end: 0;
+  inline-size: 100%;
+}
+
+/* Дополнительные стили */
+.container {
+  max-inline-size: 800px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  margin-block-start: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  max-inline-size: 150px;
+  border-radius: 50%;
+}
+
+/* Стили для кнопок */
+.buttons-section {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-block-start: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #0056b3;
+}
+
+.btn.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn.secondary:hover {
+  background-color: #545b62;
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.btn.outline:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Стили для кнопки с дискетой */
+.modal-section {
+  text-align: center;
+  margin-block-start: 2rem;
+}
+
+.save-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #28a745;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+  transform: translateY(-1px);
+}
+
+.save-btn:active {
+  transform: translateY(0);
+}
+
+.floppy-icon {
+  fill: currentColor;
+}
+
+/* Стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  min-inline-size: 300px;
+  max-inline-size: 500px;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.close-btn {
+  position: absolute;
+  inset-block-start: 1rem;
+  inset-inline-end: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.close-btn:active {
+  background-color: #e0e0e0;
+}
+
+.close-btn svg {
+  fill: #666;
+  transition: fill 0.3s ease;
+}
+
+.close-btn:hover svg {
+  fill: #333;
+}
+
+/* Стили для секции подписки */
+.newsletter-section {
+  margin: 3rem 0;
+  padding: 2rem;
+}
+
+.newsletter-container {
+  position: relative;
+  max-inline-size: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.newsletter-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.newsletter-content h2 {
+  margin-block-end: 1rem;
+  color: #333;
+}
+
+.newsletter-content p {
+  color: #666;
+  margin-block-end: 2rem;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  inline-size: 100%;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.validation-message {
+  position: absolute;
+  inset-block-end: -20px;
+  inset-inline-start: 0;
+  font-size: 0.875rem;
+  color: #dc3545;
+}
+
+.subscribe-btn {
+  position: relative;
+  inline-size: 100%;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.subscribe-btn .default-text,
+.subscribe-btn .success-text {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.subscribe-btn .success-text {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, 100%);
+}
+
+.subscribe-btn.success .default-text {
+  transform: translateY(-100%);
+}
+
+.subscribe-btn.success .success-text {
+  transform: translate(-50%, -50%);
+}
+
+.check-icon {
+  fill: currentColor;
+}
+
+.animation-background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #f3f4f6, #e5e7eb, #d1d5db);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
