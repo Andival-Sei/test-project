@@ -4,17 +4,19 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
 }
 
 header {
-  background-color: #333;
-  color: white;
+  background-color: #2d2d2d;
+  color: #ffffff;
   padding: 1rem;
   text-align: center;
 }
 
 nav {
-  background-color: #444;
+  background-color: #333333;
   padding: 0.5rem;
 }
 
@@ -44,6 +46,7 @@ main {
   margin: 0 auto;
   padding: 1rem;
   margin-block-end: 80px;
+  background-color: #1a1a1a;
 }
 
 section {
@@ -51,8 +54,8 @@ section {
 }
 
 footer {
-  background-color: #333;
-  color: white;
+  background-color: #2d2d2d;
+  color: #ffffff;
   text-align: center;
   padding: 1rem;
   position: fixed;
@@ -75,8 +78,10 @@ footer {
 .contact-form input,
 .contact-form textarea {
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid #444;
   border-radius: 4px;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
 }
 
 .contact-form button {
@@ -99,10 +104,11 @@ footer {
 }
 
 .service-card {
-  border: 1px solid #ddd;
+  border: 1px solid #444;
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #2d2d2d;
 }
 
 .team-members {
@@ -219,7 +225,7 @@ footer {
 }
 
 .modal-content {
-  background-color: white;
+  background-color: #2d2d2d;
   padding: 2rem;
   border-radius: 8px;
   position: relative;
@@ -227,6 +233,7 @@ footer {
   max-inline-size: 500px;
   transform: translateY(-20px);
   transition: transform 0.3s ease;
+  color: #e0e0e0;
 }
 
 .modal.active .modal-content {
@@ -246,7 +253,7 @@ footer {
 }
 
 .close-btn:hover {
-  background-color: #f0f0f0;
+  background-color: #444;
 }
 
 .close-btn:active {
