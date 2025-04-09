@@ -57,5 +57,47 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 50);
     });
+    
+    // Функциональность для второй кнопки
+    const newButton = document.getElementById('newButton');
+    const additionalSection = document.querySelector('.additional-section');
+    
+    // Массив с интересными фактами
+    const facts = [
+        'Знаете ли вы, что первая веб-камера была создана для наблюдения за кофейником?',
+        'Интересный факт: первый компьютерный вирус был создан в 1983 году',
+        'Знаете ли вы, что первая компьютерная мышь была сделана из дерева?',
+        'Интересный факт: первый сайт в интернете был запущен в 1991 году',
+        'Знаете ли вы, что первая компьютерная игра была создана в 1958 году?'
+    ];
+    
+    // Обработчик нажатия на вторую кнопку
+    newButton.addEventListener('click', () => {
+        // Выбираем случайный факт
+        const randomFact = facts[Math.floor(Math.random() * facts.length)];
+        
+        // Создаем новый элемент для отображения факта
+        const factElement = document.createElement('p');
+        factElement.className = 'fact-text';
+        factElement.textContent = randomFact;
+        
+        // Добавляем анимацию
+        factElement.style.animation = 'fadeIn 0.5s ease-in-out';
+        
+        // Удаляем предыдущий факт, если он есть
+        const existingFact = additionalSection.querySelector('.fact-text');
+        if (existingFact) {
+            existingFact.remove();
+        }
+        
+        // Добавляем новый факт после кнопки
+        newButton.insertAdjacentElement('afterend', factElement);
+        
+        // Анимация кнопки
+        newButton.classList.add('clicked');
+        setTimeout(() => {
+            newButton.classList.remove('clicked');
+        }, 200);
+    });
 });
 
