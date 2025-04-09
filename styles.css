@@ -140,6 +140,9 @@ footer {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+
+.services-list {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
