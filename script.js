@@ -1,6 +1,8 @@
 // Основной JavaScript файл
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Скрипт успешно подключен!');
-    
 
-}); 
+const userName = "Kirill";
+
+let str = `Hello ${userName}`;
+
+console.log(str);
+
