@@ -1,4 +1,4 @@
-/* Базовые стили для тёмной темы */
+// Базовые стили для тёмной темы
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +6,7 @@
 }
 
 body {
+  // Используем логические свойства для высоты
   background-color: #1a1a1a;
   color: #ffffff;
   font-family: Arial, sans-serif;
