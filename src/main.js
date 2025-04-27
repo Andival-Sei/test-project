@@ -2,9 +2,7 @@
 // Импортируем SCSS-стили
 import './styles.scss';
 
-// Проверяем, что скрипт загружен
-console.log('main.js загружен');
+const log = console.log;
+const dir = console.dir;
 
-// Проверяем, что стили применяются (например, цвет фона)
-console.log('Цвет фона body:', getComputedStyle(document.body).backgroundColor);
-// ... existing code ... 
+
